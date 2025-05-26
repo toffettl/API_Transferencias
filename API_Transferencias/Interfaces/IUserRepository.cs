@@ -6,5 +6,7 @@ namespace API_Transferencias.Interfaces
     {
         Task<User> ResgisterAsync(User user);
         Task<User> DeleteUser(Guid id);
+        Task<User> Update(User user);
+        Task<User> GetUserById(Guid id);
     }
 }
