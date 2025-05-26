@@ -26,9 +26,9 @@ O projeto segue uma arquitetura em camadas, separando responsabilidades entre Co
 
 - ASP.NET Core Web API
 - Entity Framework Core
-- MySQL (ou outro banco relacional)
+- MySQL
 - C#
-- Swagger (opcional para testes)
+- Swagger
 
 ## 📦 Endpoints Principais
 
