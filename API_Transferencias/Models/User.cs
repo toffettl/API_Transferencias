@@ -1,7 +1,11 @@
-﻿namespace API_Transferencias.Models;
+﻿using System.ComponentModel.DataAnnotations;
+using System.Text.Json.Serialization;
+
+namespace API_Transferencias.Models;
 
 public class User
 {
+    [Key]
     public Guid UserId { get; set; }
     public string Name { get; set; }
     public string CPF { get; set; }
@@ -9,6 +13,8 @@ public class User
     public decimal Wallet { get; set; }
     public string Password { get; set; }
 
-    public ICollection<Transfers> SentTransfers { get; set; }
-    public ICollection<Transfers> IncomingTransfers { get; set; }
+    [JsonIgnore]
+    public ICollection<Transfers>? SentTransfers { get; set; }
+    [JsonIgnore]
+    public ICollection<Transfers>? IncomingTransfers { get; set; }
 }
